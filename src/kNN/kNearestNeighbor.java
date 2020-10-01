@@ -53,6 +53,14 @@ public class kNearestNeighbor {
 
 	}
 	
+	static void getManhattanDistance(double _x, double _y) {
+		
+		distances = new double[_nod];
+		for(int i=0; i<_nod;i++) {
+			distances[i]= Math.abs(_x-x[i]) + Math.abs(_y-y[i]);
+		}
+	}
+	
 	static void putToHashMap(double _x, double _y) throws FileNotFoundException {
 		getValues();
 		getEuclideanDistance(_x , _y);
